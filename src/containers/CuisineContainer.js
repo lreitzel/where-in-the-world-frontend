@@ -2,7 +2,7 @@ import React from "react";
 import { Component } from "react";
 import { getCuisines } from '../actions/recipeActions'
 import { connect } from 'react-redux'
-import CuisineCard from "../components/cuisineCard";
+import Cuisines from "../components/Cuisines";
 
 class CuisineContainer extends Component {
 
@@ -12,16 +12,18 @@ class CuisineContainer extends Component {
         
     };
 
-    cuisineRender = () => {
-        const cuisines = this.props.cuisines
-        return cuisines.map(cuisine => <CuisineCard cuisine={cuisine} />)    
-    }
+    // cuisineRender = () => {
+    //     const cuisines = this.props.cuisines
+    //     return cuisines.map(cuisine => <CuisineCard key={cuisine.id} name={cuisine.name}/>)    
+    // }
 
     render(){
         
         return(
             <div>
-                {this.cuisineRender()}
+                <Cuisines
+                    cuisines={this.props.cuisines} 
+                />
             </div>
         )
     };
