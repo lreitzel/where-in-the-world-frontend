@@ -8,9 +8,9 @@ class Cuisine extends Component {
    
     return (
       <div>
-        <li>
+        <button>
           {cuisine.name}
-        </li>
+        </button>
       </div>
     );
   }

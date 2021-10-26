@@ -14,6 +14,7 @@ class CuisineContainer extends Component {
     render(){
         return(
             <div>
+                <h3>Select A Cuisine To See Recipes</h3>
                 <Cuisines
                     cuisines={this.props.cuisines} 
                 />

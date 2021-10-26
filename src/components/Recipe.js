@@ -5,11 +5,12 @@ class Recipe extends Component {
   render() {
 
     const recipe = this.props.recipe
-   
+
     return (
       <div>
         <li>
-          {recipe.ingredients}
+          {recipe.title}:
+          {recipe.ingredients},
           {recipe.instructions}
         </li>
       </div>

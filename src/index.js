@@ -7,15 +7,12 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 import rootReducer from './reducers/RootReducer'
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <Route path="/" component={App} />
-    </Router>
+    <App />
   </Provider>,
   document.getElementById('root')
 );
