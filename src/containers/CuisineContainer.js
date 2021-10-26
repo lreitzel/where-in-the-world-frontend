@@ -11,11 +11,6 @@ class CuisineContainer extends Component {
         this.props.getCuisines()
     };
 
-    // cuisineRender = () => {
-    //     const cuisines = this.props.cuisines
-    //     return cuisines.map(cuisine => <CuisineCard key={cuisine.id} name={cuisine.name}/>)    
-    // }
-
     render(){
         return(
             <div>

@@ -7,10 +7,21 @@ const rootReducer = (state = {cuisines: [], recipes: [], loading: false}, action
                 loading: true
             }
         case 'ADD_CUISINES':
-            
             return {
                 ...state,
                 cuisines: action.cuisines,
+                loading: false
+            }
+        case 'LOADING_RECIPES':
+            return {
+                ...state,
+                recipes: state.recipes,
+                loading: true
+            }
+        case 'ADD_RECIPES':
+            return {
+                ...state,
+                recipes: action.recipes,
                 loading: false
             }
         default:
