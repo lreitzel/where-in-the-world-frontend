@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 class Cuisine extends Component {
 
   render() {
-      debugger
+
+    const cuisine = this.props.cuisine
+   
     return (
       <div>
         <li>
-          {this.props.cuisine.name}
+          {cuisine.name}
         </li>
       </div>
     );

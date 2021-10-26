@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import { getCuisines } from '../actions/recipeActions'
+import { getCuisines } from '../actions/CuisineActions'
 import { connect } from 'react-redux'
 import Cuisines from "../components/Cuisines";
 
@@ -9,7 +9,6 @@ class CuisineContainer extends Component {
     componentDidMount(){
         console.log("is this working")
         this.props.getCuisines()
-        
     };
 
     // cuisineRender = () => {
@@ -18,7 +17,6 @@ class CuisineContainer extends Component {
     // }
 
     render(){
-        
         return(
             <div>
                 <Cuisines

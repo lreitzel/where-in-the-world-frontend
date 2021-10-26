@@ -3,13 +3,14 @@ const rootReducer = (state = {cuisines: [], recipes: [], loading: false}, action
         case 'LOADING_CUISINES':
             return {
                 ...state,
-                cuisines: [...state.cuisines],
+                cuisines: state.cuisines,
                 loading: true
             }
         case 'ADD_CUISINES':
+            
             return {
                 ...state,
-                cuisines: [...state.cuisines, action.cuisines],
+                cuisines: action.cuisines,
                 loading: false
             }
         default:
