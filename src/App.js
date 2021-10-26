@@ -9,7 +9,8 @@ class App extends Component {
   render() {
     return (
       <div >
-        <h3>Hello Lydia</h3>
+        <h1>Where In The World Is Your Recipe?</h1>
+        <h3>Select A Cuisine To See Recipes</h3>
         <CuisineContainer />
       </div>
     )
