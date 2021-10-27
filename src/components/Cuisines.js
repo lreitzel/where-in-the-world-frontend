@@ -7,13 +7,11 @@ class Cuisines extends Component {
     render () {
         const cuisines = this.props.cuisines
         const cuisineList = cuisines.map((cuisine, index) => {
-            return <Cuisine key={index} cuisine={cuisine}/>
+            return <Cuisine key={index} cuisine={cuisine} />
         })
         return(
             <div>
-                <ul>
-                    {cuisineList}
-                </ul>
+                {cuisineList}
             </div>
         )
     }

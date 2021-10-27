@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Cuisine extends Component {
 
@@ -8,9 +9,9 @@ class Cuisine extends Component {
    
     return (
       <div>
-        <button>
+        <NavLink to={`/cuisines/${cuisine.id}`}>
           {cuisine.name}
-        </button>
+        </NavLink>
       </div>
     );
   }
