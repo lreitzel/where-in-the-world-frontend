@@ -3,6 +3,7 @@ import Recipes from "../components/Recipes";
 import { Component } from "react";
 import { connect } from "react-redux";
 import { getRecipes } from '../actions/RecipeActions'
+import RecipeForm from "../components/forms/RecipeForm";
 
 class CuisineRecipes extends Component {
 
@@ -17,6 +18,7 @@ class CuisineRecipes extends Component {
             <div>
                 We're in CuisineRecipes right now!
                 <Recipes recipes={cuisineRecipes} />
+                <RecipeForm />
             </div>
         )
     }
