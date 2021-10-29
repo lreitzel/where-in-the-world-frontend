@@ -3,40 +3,41 @@ import React, { Component } from "react";
 export default class RecipeForm extends Component {
 
     state = {
-        recipe: {
-            title: '',
-            ingredients: '',
-            instructions: ''
-        }
+        title: '',
+        ingredients: '',
+        instructions: '',
+        cuisine_id: this.props.cuisineID
     }
 
-    handleInputChange(event) {
-        const target = event.target
-        const value = target.value
-        const name = value.name
-
+    handleInputChange = (event) => {
         this.setState({
-            [name]: value
+            [event.target.name]: event.target.value
         })
+    }
+
+    handleOnSubmit = (event) => {
+        event.preventDefault()
+        this.props.addRecipe(this.state)
+        this.setState({ title: '', ingredients: '', instructions: '' })
     }
 
     render() {
         return(
-            <div>
-                <form>
-                    <label>
-                        Title:
-                        <input name="title" type="text" value={this.state.recipe.title} onChange={this.handleInputChange}/>
-                    </label>
-                    <label>
+            <div className="new-recipe-form">
+                <form onSubmit={event => this.handleOnSubmit(event)}>
+                    <input name="cuisine_id" type="hidden" value={this.props.cuisineID} />
+                    <label forHTML="title">Title:</label>
+                        <input name="title" type="text" value={this.state.title} onChange={this.handleInputChange}/>
+                    <label forHTML="ingredients">
                         Ingredients:
-                        <input name="ingredients" type="text" value={this.state.recipe.ingredients} onChange={this.handleInputChange} />
                     </label>
-                    <label>
+                        <input name="ingredients" type="text" value={this.state.ingredients} onChange={this.handleInputChange} />
+                    <label forHTML="instructions">
                         Instructions:
-                        <input name="instructions" type="text" value={this.state.recipe.instructions} onChange={this.handleInputChange} />
                     </label>
-                    <input type="submit" value="Add New Recipe"/>
+                        <input name="instructions" type="text" value={this.state.instructions} onChange={this.handleInputChange} />
+                    <input type="submit" />
+
                 </form>
             </div>
         )
