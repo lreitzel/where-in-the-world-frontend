@@ -2,7 +2,7 @@ import React from "react";
 import Recipes from "../components/Recipes";
 import { Component } from "react";
 import { connect } from "react-redux";
-import { getRecipes } from '../actions/RecipeActions'
+import { getRecipes, addRecipe } from '../actions/RecipeActions'
 import RecipeForm from "../components/forms/RecipeForm";
 
 class CuisineRecipes extends Component {
@@ -13,12 +13,13 @@ class CuisineRecipes extends Component {
 
     render(){
         const cuisineId = this.props.match.params.id
+        const cuisineIdNumber = parseInt(cuisineId)
         const cuisineRecipes = this.props.recipes.filter(r => r.cuisine.id === parseInt(cuisineId))
         return(
             <div>
                 We're in CuisineRecipes right now!
                 <Recipes recipes={cuisineRecipes} />
-                <RecipeForm />
+                <RecipeForm cuisineID={cuisineIdNumber} addRecipe={this.props.addRecipe}/>
             </div>
         )
     }
@@ -31,4 +32,4 @@ const mapStateToProps = state => {
     })
 }
 
-export default connect(mapStateToProps, { getRecipes })(CuisineRecipes)
+export default connect(mapStateToProps, { getRecipes, addRecipe })(CuisineRecipes)
