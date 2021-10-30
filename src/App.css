@@ -69,4 +69,10 @@ body {
   box-shadow: 3px 4px #e04b52
 }
 
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+
 

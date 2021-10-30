@@ -17,7 +17,6 @@ class CuisineRecipes extends Component {
         const cuisineRecipes = this.props.recipes.filter(r => r.cuisine.id === parseInt(cuisineId))
         return(
             <div>
-                We're in CuisineRecipes right now!
                 <Recipes recipes={cuisineRecipes} />
                 <RecipeForm cuisineID={cuisineIdNumber} addRecipe={this.props.addRecipe}/>
             </div>

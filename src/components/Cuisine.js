@@ -9,8 +9,8 @@ class Cuisine extends Component {
    
     return (
       <div className="card">
+        <img src={cuisine.image} alt="cuisine"></img>
         <NavLink to={`/cuisines/${cuisine.id}`}>
-          {cuisine.image}
           {cuisine.name}
         </NavLink>
       </div>
