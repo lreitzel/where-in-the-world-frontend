@@ -6,12 +6,13 @@ import RecipeContainer from './containers/RecipeContainer';
 import CuisineContainer from './containers/CuisineContainer';
 import CuisineRecipes from './containers/CuisineRecipes';
 import Navbar from './components/Navbar';
+import Header from './components/header';
 
 function App() {
   
     return (
       <div className="App">
-        <h1>Where In The World Is Your Recipe?</h1>
+        <Header />
         <Router>
           <div>
             <Navbar />

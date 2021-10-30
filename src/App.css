@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+#app-header {
+  display: flex;
+  justify-content: center;
+  background: #515DA2;
+  opacity: .8;
+  height: 7rem;
+  padding: 1rem;
+}
+
 ul {
   list-style-type: none;
 }
@@ -73,6 +82,10 @@ img {
   width: 200px;
   height: 300px;
   object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
 
