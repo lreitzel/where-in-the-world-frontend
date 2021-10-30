@@ -10,6 +10,7 @@ class Cuisine extends Component {
     return (
       <div className="card">
         <NavLink to={`/cuisines/${cuisine.id}`}>
+          {cuisine.image}
           {cuisine.name}
         </NavLink>
       </div>

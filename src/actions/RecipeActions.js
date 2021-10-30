@@ -19,6 +19,7 @@ export const addRecipe = (form) => {
             title: form.title,
             ingredients: form.ingredients,
             instructions: form.instructions,
+            image: form.image,
             cuisine_id: form.cuisine_id,
         }
         const configObj = {
