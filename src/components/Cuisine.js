@@ -8,7 +8,7 @@ class Cuisine extends Component {
     const cuisine = this.props.cuisine
    
     return (
-      <div>
+      <div className="card">
         <NavLink to={`/cuisines/${cuisine.id}`}>
           {cuisine.name}
         </NavLink>

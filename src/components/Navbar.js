@@ -18,9 +18,11 @@ const links = [
 
 function Navbar() {
     return (
-        <ul className="nav tabs">
-            {links.map(link => <li><NavLink to={link.route} key={link.name} className="nav item">{link.name}</NavLink></li>) }
-        </ul>
+        <div className="navbar">
+            <ul className="nav tabs">
+                {links.map(link => <li><NavLink to={link.route} key={link.name} className="nav item">{link.name}</NavLink></li>) }
+            </ul>
+        </div>
     )
 }
 

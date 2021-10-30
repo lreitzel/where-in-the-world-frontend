@@ -7,10 +7,10 @@ class Recipe extends Component {
     const recipe = this.props.recipe
 
     return (
-      <div>
+      <div className="card">
         <li>
-          {recipe.title}:
-          {recipe.ingredients},
+          <h3>{recipe.title}</h3>
+          {recipe.ingredients}
           {recipe.instructions}
         </li>
       </div>

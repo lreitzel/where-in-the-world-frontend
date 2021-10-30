@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +45,28 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  padding: 1rem;
+  width: stretch;
+  height: auto;
+  background: #515DA2;
+  opacity: .8;
+}
+
+.new-recipe-form {
+  width: 80%
+}
+
+.card {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  height: auto;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #e04b52
+}
+
+
