@@ -40,3 +40,14 @@ export const addRecipe = (form) => {
         })
     }
 }
+
+export const deleteRecipe = (recipeToDelete) => {
+    return(dispatch) => {
+        dispatch({type: 'LOADING_DELETE_RECIPE'})
+        fetch(`http://localhost3000/recipes/${recipe.id}`, { method: "DELETE"})
+        .then(()=> dispatch({
+            type: 'DELETE_RECIPE',
+            recipe: recipeToDelete
+        }))
+    }
+}
