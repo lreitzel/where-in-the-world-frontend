@@ -36,6 +36,18 @@ const rootReducer = (state = {cuisines: [], recipes: [], loading: false}, action
                 recipes: state.recipes.concat(action.recipe),
                 loading: false
             }
+        case 'LOADING_DELETE_RECIPE':
+            return {
+                ...state,
+                recipes: state.recipes,
+                loading: true
+            }
+        case 'DELETE_RECIPE':
+            return {
+                ...state,
+                recipes: state.recipes.filter(recipe => recipe !== action.recipe),
+                loading: false
+            }
         default:
             return state
     }
