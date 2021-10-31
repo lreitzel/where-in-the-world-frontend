@@ -78,6 +78,11 @@ body {
   box-shadow: 3px 4px #e04b52
 }
 
+.del-btn {
+  text-align: end;
+  width: fit-content;
+}
+
 img {
   width: 200px;
   height: 300px;

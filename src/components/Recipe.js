@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DeleteButton from './buttons/DeleteButton';
 
 class Recipe extends Component {
 
@@ -6,17 +7,17 @@ class Recipe extends Component {
 
     const recipe = this.props.recipe
 
+    console.log(this.props)
+
     return (
       <div className="card">
-        <li>
-          {/* <button onclick={this.props.handleDeleteClick(recipe)}>X</button> */}
+          <DeleteButton handleDeleteClick={this.props.handleDeleteClick} recipe={recipe} />
           <img src={recipe.image} alt="recipe"></img>
           <h3>{recipe.title}</h3>
           <h4>Ingredients:</h4>
           {recipe.ingredients}
           <h4>Instructions:</h4>
           {recipe.instructions}
-        </li>
       </div>
     );
   }

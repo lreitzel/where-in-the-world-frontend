@@ -42,6 +42,7 @@ export const addRecipe = (form) => {
 }
 
 export const deleteRecipe = (recipeToDelete) => {
+    console.log('hitting delete action')
     return(dispatch) => {
         dispatch({type: 'LOADING_DELETE_RECIPE'})
         fetch(`http://localhost3000/recipes/${recipeToDelete.id}`, { method: "DELETE"})

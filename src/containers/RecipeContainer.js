@@ -2,7 +2,7 @@ import React from "react";
 import { Component } from "react";
 import { getRecipes } from '../actions/RecipeActions'
 import { connect } from 'react-redux'
-import Recipes from "../components/Recipes";
+import Recipe from "../components/Recipe";
 import { deleteRecipe } from "../actions/RecipeActions";
 
 class RecipeContainer extends Component {
@@ -12,11 +12,15 @@ class RecipeContainer extends Component {
         this.props.getRecipes()
     };
 
+    handleDeleteClick = (recipe) => {
+        this.props.deleteRecipe(recipe)
+    }
 
     render(){
+        const recipes = this.props.recipes.map((r,i) => <Recipe key={i} recipe={r} handleDeleteClick={this.handleDeleteClick} />)
         return(
             <div>
-                <Recipes recipes={this.props.recipes} />
+                {recipes}
             </div>
         )
     };
