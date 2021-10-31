@@ -5,19 +5,48 @@
 #app-header {
   display: flex;
   justify-content: center;
-  background: #515DA2;
+  background-color: darkred;
   opacity: .8;
   height: 7rem;
   padding: 1rem;
+  font-size: 22px;
 }
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+.home {
+  margin-left: 215px;
+  margin-right: 215px;
+}
+
+.home h2 {
+  text-align: center;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
 }
 
 body {
   margin: 0;
-  font-family: monospace;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App-logo {
@@ -92,5 +121,6 @@ img {
   margin-right: auto;
   width: 90%;
 }
+
 
 
