@@ -3,6 +3,7 @@ import { Component } from "react";
 import { getRecipes } from '../actions/RecipeActions'
 import { connect } from 'react-redux'
 import Recipes from "../components/Recipes";
+import { deleteRecipe } from "../actions/RecipeActions";
 
 class RecipeContainer extends Component {
 
@@ -10,6 +11,7 @@ class RecipeContainer extends Component {
         console.log("is this working")
         this.props.getRecipes()
     };
+
 
     render(){
         return(
@@ -27,4 +29,4 @@ const mapStateToProps = state => {
     })
 }
 
-export default connect(mapStateToProps, { getRecipes })(RecipeContainer);
+export default connect(mapStateToProps, { getRecipes, deleteRecipe })(RecipeContainer);
