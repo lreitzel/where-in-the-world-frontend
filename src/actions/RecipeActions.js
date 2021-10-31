@@ -43,9 +43,10 @@ export const addRecipe = (form) => {
 
 export const deleteRecipe = (recipeToDelete) => {
     console.log('hitting delete action')
+    const recipe = parseInt(recipeToDelete.id)
     return(dispatch) => {
         dispatch({type: 'LOADING_DELETE_RECIPE'})
-        fetch(`http://localhost3000/recipes/${recipeToDelete.id}`, { method: "DELETE"})
+        fetch(`http://localhost:3000/recipes/${recipe}`, { method: "DELETE"})
         .then(()=> dispatch({
             type: 'DELETE_RECIPE',
             recipe: recipeToDelete

@@ -28,17 +28,17 @@ export default class RecipeForm extends Component {
                 <form className="new-recipe-form" onSubmit={event => this.handleOnSubmit(event)}>
                     <h4>Add New Recipe</h4>
                     <input name="cuisine_id" type="hidden" value={this.props.cuisineID} />
-                    <label forHTML="title">Title:</label>
+                    <label>Title:</label>
                         <input name="title" type="text" value={this.state.title} onChange={this.handleInputChange} />
-                    <label forHTML="ingredients">
+                    <label>
                         Ingredients:
                     </label>
                         <input name="ingredients" type="text" value={this.state.ingredients} onChange={this.handleInputChange} />
-                    <label forHTML="instructions">
+                    <label>
                         Instructions:
                     </label>
                         <input name="instructions" type="text" value={this.state.instructions} onChange={this.handleInputChange} />
-                    <label forHTML="image">Image URL:</label>
+                    <label>Image URL:</label>
                         <input name="image" type="text" value={this.state.image} onChange={this.handleInputChange} />
                     <input type="submit" />
                 </form>

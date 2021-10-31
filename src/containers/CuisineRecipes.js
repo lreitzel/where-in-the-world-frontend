@@ -4,11 +4,16 @@ import { Component } from "react";
 import { connect } from "react-redux";
 import { getRecipes, addRecipe } from '../actions/RecipeActions'
 import RecipeForm from "../components/forms/RecipeForm";
+import { deleteRecipe } from "../actions/RecipeActions";
 
 class CuisineRecipes extends Component {
 
     componentDidMount(){
         this.props.getRecipes()
+    }
+
+    handleDeleteClick = (recipe) => {
+        this.props.deleteRecipe(recipe)
     }
 
     render(){
@@ -32,4 +37,4 @@ const mapStateToProps = state => {
     })
 }
 
-export default connect(mapStateToProps, { getRecipes, addRecipe })(CuisineRecipes)
+export default connect(mapStateToProps, { getRecipes, addRecipe, deleteRecipe })(CuisineRecipes)

@@ -7,8 +7,6 @@ class Recipe extends Component {
 
     const recipe = this.props.recipe
 
-    console.log(this.props)
-
     return (
       <div className="card">
           <DeleteButton handleDeleteClick={this.props.handleDeleteClick} recipe={recipe} />
