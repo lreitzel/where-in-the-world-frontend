@@ -1,3 +1,7 @@
+# README
+
+This is the frontend for Where In The World Is Your Recipe. Please fork and clone this repo onto your local machine and run npm or yarn install, whichever you prefer. Then you can run npm or yarn start and select 'yes' if asked about using a different route because localhost:3000 is already being accessed by the backend of this application. From there the application should open in your browser and you can feel free to peruse the various cuisines and recipes, and add as many recipes as you'd like! 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
