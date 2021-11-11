@@ -33,11 +33,11 @@ export default class RecipeForm extends Component {
                     <label>
                         Ingredients:
                     </label>
-                        <input name="ingredients" type="text" value={this.state.ingredients} onChange={this.handleInputChange} />
+                        <textarea name="ingredients" type="text" value={this.state.ingredients} onChange={this.handleInputChange} />
                     <label>
                         Instructions:
                     </label>
-                        <input name="instructions" type="text" value={this.state.instructions} onChange={this.handleInputChange} />
+                        <textarea name="instructions" type="text" value={this.state.instructions} onChange={this.handleInputChange} />
                     <label>Image URL:</label>
                         <input name="image" type="text" value={this.state.image} onChange={this.handleInputChange} />
                     <input type="submit" />
