@@ -20,6 +20,7 @@ class RecipeContainer extends Component {
         const recipes = this.props.recipes.map((r,i) => <Recipe key={i} recipe={r} handleDeleteClick={this.handleDeleteClick} />)
         return(
             <div>
+                <h3>All Recipes</h3>
                 {recipes}
             </div>
         )

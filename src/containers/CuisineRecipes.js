@@ -23,6 +23,7 @@ class CuisineRecipes extends Component {
         const filteredRecipes =  cuisineRecipes.map((r,i) => <Recipe key={i} recipe={r} handleDeleteClick={this.handleDeleteClick} />)
         return(
             <div>
+                <h3>Recipes</h3>
                 {filteredRecipes}
                 <RecipeForm cuisineID={cuisineIdNumber} addRecipe={this.props.addRecipe}/>
             </div>
