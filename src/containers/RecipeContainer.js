@@ -8,7 +8,6 @@ import { deleteRecipe } from "../actions/RecipeActions";
 class RecipeContainer extends Component {
 
     componentDidMount(){
-        console.log("is this working")
         this.props.getRecipes()
     };
 
